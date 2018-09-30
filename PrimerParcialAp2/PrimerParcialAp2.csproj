@@ -77,10 +77,29 @@
     <Content Include="App_Data\Parcial1Db_log.ldf">
       <DependentUpon>Parcial1Db.mdf</DependentUpon>
     </Content>
+    <Content Include="Context\bootstrap.min.css" />
+    <Content Include="Context\bootstrap.min.js" />
+    <Content Include="Context\bootstrap4-neon-glow.min.css" />
+    <Content Include="Context\jquery-3.1.1.slim.min.js" />
+    <Content Include="Context\Script.js" />
+    <Content Include="Context\tether.min.js" />
+    <Content Include="Context\toastr.js" />
+    <Content Include="Context\toastr.min.css" />
+    <Content Include="Deafult.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="UI\Consulta\ConsultaCuenta.aspx" />
+    <Content Include="UI\Regitro\Depositos.aspx" />
+    <Content Include="UI\Regitro\RegistroCuenta.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Deafult.aspx.cs">
+      <DependentUpon>Deafult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Deafult.aspx.designer.cs">
+      <DependentUpon>Deafult.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -90,13 +109,44 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consulta\ConsultaCuenta.aspx.cs">
+      <DependentUpon>ConsultaCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Consulta\ConsultaCuenta.aspx.designer.cs">
+      <DependentUpon>ConsultaCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Regitro\Depositos.aspx.cs">
+      <DependentUpon>Depositos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Regitro\Depositos.aspx.designer.cs">
+      <DependentUpon>Depositos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Regitro\RegistroCuenta.aspx.cs">
+      <DependentUpon>RegistroCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Regitro\RegistroCuenta.aspx.designer.cs">
+      <DependentUpon>RegistroCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Context\toastr.less" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -106,8 +156,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="UI\Consulta\" />
-    <Folder Include="UI\Regitro\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{d1c17163-ae11-45a6-a8f6-ea2575125a2e}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{C4B31D03-5DB2-43C3-8F88-5919C54A8342}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

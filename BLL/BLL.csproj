@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CuentasBLL.cs" />
+    <Compile Include="DepositosBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,10 +64,6 @@
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{C4B31D03-5DB2-43C3-8F88-5919C54A8342}</Project>
       <Name>Entidades</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PrimerParcialAp2\PrimerParcialAp2.csproj">
-      <Project>{a7b33ee5-f058-440b-94f5-b233286a42e4}</Project>
-      <Name>PrimerParcialAp2</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
